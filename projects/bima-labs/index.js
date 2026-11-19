@@ -57,7 +57,8 @@ async function borrowed(api) {
 }
 
 module.exports = {
-  methodology: 'TVL is the balance of lent assets held in Bima Credit vaults created by the CollateralFixedTermFactory on each chain. Borrowed is the outstanding principal drawn by borrowers from those vaults.',
+  doublecounted: true,
+  methodology: 'TVL is the balance of lent assets held in Bima Credit vaults created by the CollateralFixedTermFactory on each chain. Borrowed is the outstanding principal drawn by borrowers from those vaults. The vaults are Accountable vaults and are also counted in the Accountable listing, so this listing is marked as double counted.',
 }
 
 Object.keys(FACTORIES).forEach(chain => {
